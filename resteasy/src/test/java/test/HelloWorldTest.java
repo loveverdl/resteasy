@@ -93,21 +93,6 @@ public class HelloWorldTest {
 	}
 
 	public static void main(String[] args) {
-		TJWSEmbeddedJaxrsServer server = new TJWSEmbeddedJaxrsServer();
-		server.setPort(8082);
-		server.getDeployment().getRegistry()
-				.addPerRequestResource(HelloWorld.class);
-		try {
-			ClientRequest request = new ClientRequest(
-					"http://localhost:8082/hello world/test");
-			String message = request.getTarget(String.class);
-			System.out.println(message);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} finally {
-			server.stop();
-		}
 		Form f = new Form();
 		User user = new User();
 		user.setName("wang");

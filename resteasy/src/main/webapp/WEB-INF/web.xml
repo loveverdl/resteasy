@@ -8,6 +8,10 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:applicationContext.xml</param-value>
 	</context-param>
+	<context-param>
+		<param-name>resteasy.servlet.mapping.prefix</param-name>
+		<param-value>/ra</param-value>
+	</context-param>
 	<!-- <context-param> <param-name>resteasy.scan.resources</param-name> <param-value>true</param-value> 
 		</context-param> -->
 	<listener>
@@ -24,7 +28,7 @@
 
 	<servlet-mapping>
 		<servlet-name>Resteasy</servlet-name>
-		<url-pattern>/*</url-pattern>
+		<url-pattern>/ra/*</url-pattern>
 	</servlet-mapping>
 
 </web-app>
